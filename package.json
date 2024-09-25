@@ -17,7 +17,7 @@
       "@semantic-release/github",
       "@semantic-release/exec"
     ],
-    "prepareCmd": "npm install && npm version ${nextRelease.version} && npm run build",
+    "prepareCmd": "npm install && npm version ${nextRelease.version} --no-git-tag-version && npm run build",
     "publishCmd": "echo 'Publishing version ${nextRelease.version}'",
     "successCmd": "echo 'Successfully created release for version ${nextRelease.version}'",
     "failCmd": "echo 'Failed to release version ${nextRelease.version}'"
